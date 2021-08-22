@@ -1,0 +1,114 @@
+
+body {
+    font-size: 2em;
+    background-color: #010a01;
+    min-height: 640px;
+}
+h1 {
+    animation:
+        pulsate 2.5s infinite alternate,
+        flicker 1.5s infinite alternate;
+
+    position: absolute;
+    left: 26%;
+    top: 24%;
+}
+h2 {
+	font-size: 0.7em;
+	color: orange;
+	font-weight: 100;
+	opacity: 0.3;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -0%);
+}
+
+h3 {
+	color: orange;
+	font-weight: 100;
+	opacity: 0.3;
+	position: absolute;
+	top: 63%;
+	left: 50%;
+	transform: translate(-50%, -0%);
+}
+.neonText {
+
+    border: 1px solid #ce97cf;
+    border-opacity: 0.1;
+    border-radius: 9px;
+      box-shadow: 0 0 .2rem #ce97cf,
+              0 0 .2rem #682D52,
+              0 0 2rem #bc13fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+
+    padding: 10px 15px;
+    padding-top: 6px;
+    color: #fba4fc;
+    text-shadow:
+    0 0 7px  #fba4fc,
+    0 0 10px #fba4fc,
+    0 0 21px #fba4fc,
+/**/
+    0 0 42px  #FF6EC7,
+    0 0 82px  #FF6EC7,
+    0 0 92px  #FF6EC7,
+    0 0 102px #FF6EC7,
+    0 0 151px #FF6EC7;
+
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+
+      0 0 4px  #fba4fc,
+      0 0 11px #fba4fc,
+      0 0 19px #fba4fc,
+
+      0 0 40px  #FF6EC7,
+      0 0 80px  #FF6EC7,
+      0 0 90px  #FF6EC7,
+      0 0 100px #FF6EC7,
+      0 0 150px #FF6EC7;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    border-shadow:
+      0 0 4px #fba4fc,
+      0 0 11px #fba4fc,
+      0 0 19px #fba4fc,
+      0 0 40px #FF6EC7,
+      0 0 80px #FF6EC7,
+      0 0 90px #FF6EC7,
+      0 0 100px #FF6EC7,
+      0 0 150px #FF6EC7;
+  }
+  0% {
+    /* Smaller blur radius */
+    border-shadow:
+      0 0 2px #fba4fc,
+      0 0 4px #fba4fc,
+      0 0 6px #fba4fc,
+      0 0 10px #FF6EC7,
+      0 0 45px #FF6EC7,
+      0 0 55px #FF6EC7,
+      0 0 70px #FF6EC7,
+      0 0 80px #FF6EC7;
+  }
+}
+
+@media screen and (prefers-reduced-motion) {
+  h1 {
+    animation: none;
+  }
+}
